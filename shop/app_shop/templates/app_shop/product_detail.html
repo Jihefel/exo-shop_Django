@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+{% with nom=product.name %}
+<h1>{{nom}}</h1>
+{% if product.in_stock == True %}
+    <p>{{product.price}} €</p>
+{% else %}
+<p>Ce produit ({{nom}}) n'est plus disponible</p>
+{% endif %}
+
+{% endwith %}
+{% endblock content %}
